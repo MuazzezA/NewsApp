@@ -9,25 +9,30 @@
 /* Begin PBXBuildFile section */
 		F21CEAB02AAC7BF000BF3D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21CEAAF2AAC7BF000BF3D98 /* AppDelegate.swift */; };
 		F21CEAB22AAC7BF000BF3D98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21CEAB12AAC7BF000BF3D98 /* SceneDelegate.swift */; };
-		F21CEAB42AAC7BF000BF3D98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21CEAB32AAC7BF000BF3D98 /* ViewController.swift */; };
 		F21CEAB72AAC7BF000BF3D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21CEAB52AAC7BF000BF3D98 /* Main.storyboard */; };
 		F21CEABA2AAC7BF000BF3D98 /* NewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F21CEAB82AAC7BF000BF3D98 /* NewsApp.xcdatamodeld */; };
 		F21CEABC2AAC7BF100BF3D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21CEABB2AAC7BF100BF3D98 /* Assets.xcassets */; };
 		F21CEABF2AAC7BF100BF3D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21CEABD2AAC7BF100BF3D98 /* LaunchScreen.storyboard */; };
 		F2F515252AAE1F9500A3F06D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F515242AAE1F9500A3F06D /* config.swift */; };
+		F2F5152B2AAE293D00A3F06D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2F5152A2AAE293D00A3F06D /* FirebaseAuth */; };
+		F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */; };
+		F2F515312AAE562100A3F06D /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F515302AAE562100A3F06D /* OnboardingSlide.swift */; };
+		F2F515332AAE57D900A3F06D /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F515322AAE57D900A3F06D /* OnboardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F21CEAAC2AAC7BF000BF3D98 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21CEAAF2AAC7BF000BF3D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21CEAB12AAC7BF000BF3D98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F21CEAB32AAC7BF000BF3D98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F21CEAB62AAC7BF000BF3D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F21CEAB92AAC7BF000BF3D98 /* NewsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsApp.xcdatamodel; sourceTree = "<group>"; };
 		F21CEABB2AAC7BF100BF3D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21CEABE2AAC7BF100BF3D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21CEAC02AAC7BF100BF3D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2F515242AAE1F9500A3F06D /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F2F515302AAE562100A3F06D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		F2F515322AAE57D900A3F06D /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F5152B2AAE293D00A3F06D /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,13 +66,13 @@
 		F21CEAAE2AAC7BF000BF3D98 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				F2F5152F2AAE53C700A3F06D /* Extensions */,
 				F2F515282AAE21AB00A3F06D /* Views */,
 				F2F515272AAE219800A3F06D /* ViewModels */,
 				F2F515262AAE219100A3F06D /* Models */,
 				F2F515232AAE1F8600A3F06D /* Services */,
 				F21CEAAF2AAC7BF000BF3D98 /* AppDelegate.swift */,
 				F21CEAB12AAC7BF000BF3D98 /* SceneDelegate.swift */,
-				F21CEAB32AAC7BF000BF3D98 /* ViewController.swift */,
 				F21CEAB52AAC7BF000BF3D98 /* Main.storyboard */,
 				F21CEABB2AAC7BF100BF3D98 /* Assets.xcassets */,
 				F21CEABD2AAC7BF100BF3D98 /* LaunchScreen.storyboard */,
@@ -87,6 +93,7 @@
 		F2F515262AAE219100A3F06D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F2F515302AAE562100A3F06D /* OnboardingSlide.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,8 +108,25 @@
 		F2F515282AAE21AB00A3F06D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F2F5152C2AAE2C0700A3F06D /* Onboarding */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F2F5152C2AAE2C0700A3F06D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */,
+				F2F515322AAE57D900A3F06D /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F2F5152F2AAE53C700A3F06D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +145,9 @@
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+				F2F5152A2AAE293D00A3F06D /* FirebaseAuth */,
+			);
 			productName = NewsApp;
 			productReference = F21CEAAC2AAC7BF000BF3D98 /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +176,9 @@
 				Base,
 			);
 			mainGroup = F21CEAA32AAC7BF000BF3D98;
+			packageReferences = (
+				F2F515292AAE293D00A3F06D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F21CEAAD2AAC7BF000BF3D98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,10 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21CEAB42AAC7BF000BF3D98 /* ViewController.swift in Sources */,
+				F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */,
 				F21CEAB02AAC7BF000BF3D98 /* AppDelegate.swift in Sources */,
 				F21CEABA2AAC7BF000BF3D98 /* NewsApp.xcdatamodeld in Sources */,
 				F2F515252AAE1F9500A3F06D /* config.swift in Sources */,
+				F2F515312AAE562100A3F06D /* OnboardingSlide.swift in Sources */,
+				F2F515332AAE57D900A3F06D /* OnboardingCollectionViewCell.swift in Sources */,
 				F21CEAB22AAC7BF000BF3D98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2F515292AAE293D00A3F06D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2F5152A2AAE293D00A3F06D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2F515292AAE293D00A3F06D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F21CEAB82AAC7BF000BF3D98 /* NewsApp.xcdatamodeld */ = {
