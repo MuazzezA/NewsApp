@@ -14,6 +14,7 @@
 		F21CEABC2AAC7BF100BF3D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21CEABB2AAC7BF100BF3D98 /* Assets.xcassets */; };
 		F21CEABF2AAC7BF100BF3D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21CEABD2AAC7BF100BF3D98 /* LaunchScreen.storyboard */; };
 		F26962CC2AB388A2005EEA46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26962CB2AB388A2005EEA46 /* LoginViewController.swift */; };
+		F26962CE2AB390CE005EEA46 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26962CD2AB390CE005EEA46 /* RegisterViewController.swift */; };
 		F2F515252AAE1F9500A3F06D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F515242AAE1F9500A3F06D /* config.swift */; };
 		F2F5152B2AAE293D00A3F06D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2F5152A2AAE293D00A3F06D /* FirebaseAuth */; };
 		F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */; };
@@ -31,6 +32,7 @@
 		F21CEABE2AAC7BF100BF3D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21CEAC02AAC7BF100BF3D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26962CB2AB388A2005EEA46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F26962CD2AB390CE005EEA46 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F2F515242AAE1F9500A3F06D /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F2F515302AAE562100A3F06D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				F26962CB2AB388A2005EEA46 /* LoginViewController.swift */,
+				F26962CD2AB390CE005EEA46 /* RegisterViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26962CE2AB390CE005EEA46 /* RegisterViewController.swift in Sources */,
 				F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */,
 				F21CEAB02AAC7BF000BF3D98 /* AppDelegate.swift in Sources */,
 				F21CEABA2AAC7BF000BF3D98 /* NewsApp.xcdatamodeld in Sources */,
