@@ -13,6 +13,7 @@
 		F21CEABA2AAC7BF000BF3D98 /* NewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F21CEAB82AAC7BF000BF3D98 /* NewsApp.xcdatamodeld */; };
 		F21CEABC2AAC7BF100BF3D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21CEABB2AAC7BF100BF3D98 /* Assets.xcassets */; };
 		F21CEABF2AAC7BF100BF3D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21CEABD2AAC7BF100BF3D98 /* LaunchScreen.storyboard */; };
+		F26962CC2AB388A2005EEA46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26962CB2AB388A2005EEA46 /* LoginViewController.swift */; };
 		F2F515252AAE1F9500A3F06D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F515242AAE1F9500A3F06D /* config.swift */; };
 		F2F5152B2AAE293D00A3F06D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2F5152A2AAE293D00A3F06D /* FirebaseAuth */; };
 		F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */; };
@@ -29,6 +30,7 @@
 		F21CEABB2AAC7BF100BF3D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21CEABE2AAC7BF100BF3D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21CEAC02AAC7BF100BF3D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F26962CB2AB388A2005EEA46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F2F515242AAE1F9500A3F06D /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F2F515302AAE562100A3F06D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = NewsApp;
 			sourceTree = "<group>";
 		};
+		F26962CA2AB3888C005EEA46 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F26962CB2AB388A2005EEA46 /* LoginViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		F2F515232AAE1F8600A3F06D /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		F2F515282AAE21AB00A3F06D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F26962CA2AB3888C005EEA46 /* Auth */,
 				F2F5152C2AAE2C0700A3F06D /* Onboarding */,
 			);
 			path = Views;
@@ -210,6 +221,7 @@
 				F21CEAB02AAC7BF000BF3D98 /* AppDelegate.swift in Sources */,
 				F21CEABA2AAC7BF000BF3D98 /* NewsApp.xcdatamodeld in Sources */,
 				F2F515252AAE1F9500A3F06D /* config.swift in Sources */,
+				F26962CC2AB388A2005EEA46 /* LoginViewController.swift in Sources */,
 				F2F515312AAE562100A3F06D /* OnboardingSlide.swift in Sources */,
 				F2F515332AAE57D900A3F06D /* OnboardingCollectionViewCell.swift in Sources */,
 				F21CEAB22AAC7BF000BF3D98 /* SceneDelegate.swift in Sources */,

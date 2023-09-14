@@ -91,7 +91,7 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Devam Et">
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -136,8 +136,127 @@
             </objects>
             <point key="canvasLocation" x="43.511450381679388" y="-2.1126760563380285"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="VOW-pt-wPZ">
+            <objects>
+                <viewController id="xBF-dR-NYd" customClass="LoginViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vmr-am-oOT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muf-gw-rbf">
+                                <rect key="frame" x="175" y="250" width="43" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-G9-GbZ" userLabel="mail">
+                                <rect key="frame" x="46.666666666666657" y="371" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="YnL-qe-WVU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kon-mi-a08" userLabel="password">
+                                <rect key="frame" x="46.666666666666657" y="445" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="aX5-BS-gxo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIe-rU-fsg">
+                                <rect key="frame" x="50" y="426" width="26.333333333333329" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-sk-0oh">
+                                <rect key="frame" x="50" y="348" width="24" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="i7m-4x-zKQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkO-ve-z7k" userLabel="Next">
+                                <rect key="frame" x="121.66666666666669" y="698" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.52941179279999995" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="R7M-CD-7X3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cqu-Ri-A3p"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Giriş Yap">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="irg-hT-3c8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabın mı yok?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQj-J7-2Bn">
+                                <rect key="frame" x="97" y="760" width="105" height="19"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-world" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-Ia-Djk">
+                                <rect key="frame" x="0.0" y="59" width="393" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.77263673509999997" green="0.77196289699999998" blue="0.77410827019999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGM-3Y-xCC">
+                                <rect key="frame" x="211" y="753" width="77" height="33"/>
+                                <color key="tintColor" red="0.93725490570000003" green="0.52941179279999995" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Kayıt Ol">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qcD-SK-l3P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Atq-sk-0oh" firstAttribute="leading" secondItem="qcD-SK-l3P" secondAttribute="leading" constant="50" id="2XT-iK-R9Q"/>
+                            <constraint firstItem="qcD-SK-l3P" firstAttribute="trailing" secondItem="LGM-3Y-xCC" secondAttribute="trailing" constant="105" id="8Tx-Z5-d3E"/>
+                            <constraint firstItem="XQj-J7-2Bn" firstAttribute="top" secondItem="kkO-ve-z7k" secondAttribute="bottom" constant="22" id="DNz-uv-TGp"/>
+                            <constraint firstItem="lgd-G9-GbZ" firstAttribute="top" secondItem="Vmr-am-oOT" secondAttribute="top" constant="371" id="EZH-V1-kqE"/>
+                            <constraint firstItem="Kon-mi-a08" firstAttribute="centerX" secondItem="Vmr-am-oOT" secondAttribute="centerX" id="Kil-w2-8dc"/>
+                            <constraint firstItem="Muf-gw-rbf" firstAttribute="top" secondItem="qcD-SK-l3P" secondAttribute="top" constant="191" id="O7X-aT-3NZ"/>
+                            <constraint firstItem="kkO-ve-z7k" firstAttribute="centerX" secondItem="Vmr-am-oOT" secondAttribute="centerX" id="Uaw-Fl-Ih2"/>
+                            <constraint firstItem="lgd-G9-GbZ" firstAttribute="centerX" secondItem="Vmr-am-oOT" secondAttribute="centerX" id="Xw0-7n-kfP"/>
+                            <constraint firstItem="LGM-3Y-xCC" firstAttribute="top" secondItem="kkO-ve-z7k" secondAttribute="bottom" constant="15" id="ZOI-Wg-FN0"/>
+                            <constraint firstItem="lgd-G9-GbZ" firstAttribute="top" secondItem="Atq-sk-0oh" secondAttribute="bottom" constant="8" id="aWo-ae-VH2"/>
+                            <constraint firstItem="qcD-SK-l3P" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Atq-sk-0oh" secondAttribute="trailing" symbolic="YES" id="bOx-Rk-7Wi"/>
+                            <constraint firstItem="XQj-J7-2Bn" firstAttribute="leading" secondItem="qcD-SK-l3P" secondAttribute="leading" constant="97" id="bfV-tT-ycS"/>
+                            <constraint firstItem="YIe-rU-fsg" firstAttribute="leading" secondItem="qcD-SK-l3P" secondAttribute="leading" constant="50" id="et0-Vo-tWx"/>
+                            <constraint firstItem="qcD-SK-l3P" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YIe-rU-fsg" secondAttribute="trailing" symbolic="YES" id="lY2-Ft-5io"/>
+                            <constraint firstItem="Kon-mi-a08" firstAttribute="top" secondItem="lgd-G9-GbZ" secondAttribute="bottom" constant="40" id="oFz-WD-0nQ"/>
+                            <constraint firstItem="LGM-3Y-xCC" firstAttribute="leading" secondItem="XQj-J7-2Bn" secondAttribute="trailing" constant="9" id="tue-2B-vJs"/>
+                            <constraint firstItem="Muf-gw-rbf" firstAttribute="centerX" secondItem="Vmr-am-oOT" secondAttribute="centerX" id="wSw-9u-Bh3"/>
+                            <constraint firstItem="YIe-rU-fsg" firstAttribute="top" secondItem="lgd-G9-GbZ" secondAttribute="bottom" constant="21" id="xvt-b8-1LC"/>
+                            <constraint firstItem="qcD-SK-l3P" firstAttribute="bottom" secondItem="kkO-ve-z7k" secondAttribute="bottom" constant="80" id="xx9-BN-jTO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eMk-Kp-4H5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142.7480916030534" y="-254.22535211267606"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bg-world" width="6001" height="4001"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
