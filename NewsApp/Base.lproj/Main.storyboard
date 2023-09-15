@@ -281,7 +281,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kayıt Ol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETI-3j-zxy">
-                                <rect key="frame" x="159.33333333333334" y="296" width="75" height="26"/>
+                                <rect key="frame" x="159" y="296" width="75" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -299,7 +299,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-mr-RwZ" userLabel="Next">
-                                <rect key="frame" x="121.33333333333333" y="703" width="150.66666666666669" height="40"/>
+                                <rect key="frame" x="121.33333333333331" y="703" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.52941179279999995" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
@@ -310,7 +310,7 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Giriş Yap">
+                                <buttonConfiguration key="configuration" style="plain" title="Kayıt Ol">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -320,22 +320,9 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJz-0O-KGd"/>
+                                    <action selector="registerButtonAct:" destination="c04-VU-Pq6" eventType="touchUpInside" id="IHL-rW-kD1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW2-wd-TOk">
-                                <rect key="frame" x="213.66666666666666" y="758" width="82.666666666666657" height="33"/>
-                                <color key="tintColor" red="0.93725490570000003" green="0.52941179279999995" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Giriş Yap">
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabın var mı?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX5-M7-EqN">
-                                <rect key="frame" x="102" y="765" width="102.66666666666669" height="19"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ah1-Z5-DId">
                                 <rect key="frame" x="50" y="376" width="300" height="34"/>
                                 <constraints>
@@ -365,16 +352,10 @@
                             <constraint firstItem="tLJ-hf-KAm" firstAttribute="leading" secondItem="YlS-Ta-ZgC" secondAttribute="leading" constant="50" id="KBU-Tg-vyk"/>
                             <constraint firstItem="ah1-Z5-DId" firstAttribute="leading" secondItem="YlS-Ta-ZgC" secondAttribute="leading" constant="50" id="PhL-Ii-Pwb"/>
                             <constraint firstItem="Ckk-dO-KD5" firstAttribute="leading" secondItem="YlS-Ta-ZgC" secondAttribute="leading" id="VWM-HK-p1w"/>
-                            <constraint firstItem="cW2-wd-TOk" firstAttribute="leading" secondItem="rX5-M7-EqN" secondAttribute="trailing" constant="9" id="eU8-Jj-2wd"/>
-                            <constraint firstItem="rX5-M7-EqN" firstAttribute="leading" secondItem="YlS-Ta-ZgC" secondAttribute="leading" constant="102" id="gSl-7O-nwh"/>
                             <constraint firstItem="Ckk-dO-KD5" firstAttribute="top" secondItem="YlS-Ta-ZgC" secondAttribute="top" id="i1T-kx-4Qj"/>
                             <constraint firstItem="ETI-3j-zxy" firstAttribute="top" secondItem="Ckk-dO-KD5" secondAttribute="bottom" constant="20" id="iF7-jR-Hbq"/>
                             <constraint firstItem="YlS-Ta-ZgC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Q3R-Sc-fVx" secondAttribute="trailing" symbolic="YES" id="iVx-us-Upl"/>
-                            <constraint firstItem="rX5-M7-EqN" firstAttribute="centerY" secondItem="cW2-wd-TOk" secondAttribute="centerY" id="lLV-DE-ebU"/>
-                            <constraint firstItem="cW2-wd-TOk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rX5-M7-EqN" secondAttribute="trailing" symbolic="YES" id="nfr-x3-egz"/>
                             <constraint firstItem="Q3R-Sc-fVx" firstAttribute="leading" secondItem="YlS-Ta-ZgC" secondAttribute="leading" constant="50" id="ngi-It-hg5"/>
-                            <constraint firstItem="cW2-wd-TOk" firstAttribute="top" secondItem="wzg-mr-RwZ" secondAttribute="bottom" constant="15" id="oab-Mj-SRd"/>
-                            <constraint firstItem="YlS-Ta-ZgC" firstAttribute="trailing" secondItem="cW2-wd-TOk" secondAttribute="trailing" constant="97" id="qHo-gJ-b7E"/>
                             <constraint firstItem="YlS-Ta-ZgC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zjr-Ap-Tol" secondAttribute="trailing" symbolic="YES" id="ugQ-03-k2G"/>
                             <constraint firstItem="ah1-Z5-DId" firstAttribute="top" secondItem="dOb-SY-ocx" secondAttribute="top" constant="376" id="wHv-ib-Ie2"/>
                             <constraint firstItem="ETI-3j-zxy" firstAttribute="centerX" secondItem="dOb-SY-ocx" secondAttribute="centerX" id="xhk-fZ-hpQ"/>
@@ -385,6 +366,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5by-jH-oZ7"/>
+                    <connections>
+                        <outlet property="mailRegisterTextField" destination="ah1-Z5-DId" id="i7a-1W-UVE"/>
+                        <outlet property="pswRegisterTextField" destination="tLJ-hf-KAm" id="uUB-Zu-mfW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dG1-cC-N6A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
