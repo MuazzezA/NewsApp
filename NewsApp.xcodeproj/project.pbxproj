@@ -18,6 +18,8 @@
 		F26CFE902AB467DA003B7C1E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26CFE8F2AB467DA003B7C1E /* Home.storyboard */; };
 		F26CFE922AB46B55003B7C1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26CFE912AB46B55003B7C1E /* HomeViewController.swift */; };
 		F26CFE942AB4808D003B7C1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26CFE932AB4808D003B7C1E /* GoogleService-Info.plist */; };
+		F2B9130E2AB4A49A006B9BCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9130D2AB4A49A006B9BCF /* ProfileViewController.swift */; };
+		F2B913102AB4A4AC006B9BCF /* SavedNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9130F2AB4A4AC006B9BCF /* SavedNewsViewController.swift */; };
 		F2F515252AAE1F9500A3F06D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F515242AAE1F9500A3F06D /* config.swift */; };
 		F2F5152B2AAE293D00A3F06D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2F5152A2AAE293D00A3F06D /* FirebaseAuth */; };
 		F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */; };
@@ -39,6 +41,8 @@
 		F26CFE8F2AB467DA003B7C1E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F26CFE912AB46B55003B7C1E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F26CFE932AB4808D003B7C1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2B9130D2AB4A49A006B9BCF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F2B9130F2AB4A4AC006B9BCF /* SavedNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNewsViewController.swift; sourceTree = "<group>"; };
 		F2F515242AAE1F9500A3F06D /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F2F515302AAE562100A3F06D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
@@ -107,15 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				F26CFE912AB46B55003B7C1E /* HomeViewController.swift */,
+				F2B9130D2AB4A49A006B9BCF /* ProfileViewController.swift */,
+				F2B9130F2AB4A4AC006B9BCF /* SavedNewsViewController.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		F2B9130C2AB496A7006B9BCF /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		F2F515232AAE1F8600A3F06D /* Services */ = {
@@ -144,7 +143,6 @@
 		F2F515282AAE21AB00A3F06D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F2B9130C2AB496A7006B9BCF /* Profile */,
 				F2B9130B2AB4969B006B9BCF /* Home */,
 				F26962CA2AB3888C005EEA46 /* Auth */,
 				F2F5152C2AAE2C0700A3F06D /* Onboarding */,
@@ -253,10 +251,12 @@
 				F21CEABA2AAC7BF000BF3D98 /* NewsApp.xcdatamodeld in Sources */,
 				F2F515252AAE1F9500A3F06D /* config.swift in Sources */,
 				F26CFE922AB46B55003B7C1E /* HomeViewController.swift in Sources */,
+				F2B9130E2AB4A49A006B9BCF /* ProfileViewController.swift in Sources */,
 				F26962CC2AB388A2005EEA46 /* LoginViewController.swift in Sources */,
 				F2F515312AAE562100A3F06D /* OnboardingSlide.swift in Sources */,
 				F2F515332AAE57D900A3F06D /* OnboardingCollectionViewCell.swift in Sources */,
 				F21CEAB22AAC7BF000BF3D98 /* SceneDelegate.swift in Sources */,
+				F2B913102AB4A4AC006B9BCF /* SavedNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

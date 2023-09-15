@@ -59,7 +59,7 @@
         <!--Profil-->
         <scene sceneID="cXE-ZJ-DUE">
             <objects>
-                <viewController id="eAd-0P-ecy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="eAd-0P-ecy" customClass="ProfileViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JS4-56-wvY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,7 @@
         <!--Kayıtlar-->
         <scene sceneID="z1N-2F-bV7">
             <objects>
-                <viewController id="fUX-kh-kO5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SavedNewsViewController" id="fUX-kh-kO5" customClass="SavedNewsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVA-5v-JLf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
