@@ -16,7 +16,7 @@ class WebService: Codable {
     
         func getNewsData(with urlString: String, completion: @escaping (Result<News, Error>) -> Void) {
                
-               guard let url = URL(string: urlString) else {
+               guard let url = URL(string: BASEURL + urlString + "&apiKey=" + API_KEY) else {
                    completion(.failure(NSError(domain: "URL oluşturulamadı.", code: 0)))
                    return
                }

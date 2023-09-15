@@ -20,21 +20,18 @@ class HomeViewController: UIViewController {
         newsTableView.dataSource = self
         newsTableView.delegate = self
         
-        let urlString = "https://newsapi.org/v2/top-headlines?country=us&apiKey="+API_KEY
+        let urlString = "top-headlines?country=us"
         
         WebService.shared.getNewsData(with: urlString) { result in
             switch result {
             case .success(let newsData):
                 
                 DispatchQueue.main.async {
-                    
-                    //self.topHeadlinesData.removeAll()
                     self.topHeadlinesData = newsData
                     self.newsTableView.reloadData()
                    
                 }
             case .failure(let error):
-                // Hata durumu
                 print("Hata:", error)
             }
         }
@@ -59,19 +56,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             let session = URLSession.shared
             let task = session.dataTask(with: imageURL) { (data, response, error) in
                 if let error = error {
-                    // Hata durumu
                     print("Hata:", error)
                     DispatchQueue.main.async {
-                        // Hata işleme veya varsayılan resim ayarlama
                         cell.newsImage.image = UIImage(named: "bg-world")
                     }
                 } else if let imageData = data, let image = UIImage(data: imageData) {
-                    // UIImage'i ana iş parçasında güncelleyin
                     DispatchQueue.main.async {
                         cell.newsImage.image = image
                     }
                 } else {
-                    // Veriyi işleyemediyseniz veya UIImage oluşturamadıysanız
                     DispatchQueue.main.async {
                         cell.newsImage.image = UIImage(named: "bg-world")
                     }
@@ -79,7 +72,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             }
             task.resume()
         } else {
-            // URL geçerli değilse, varsayılan bir resim veya hata işleme ekleyebilirsiniz
             cell.newsImage.image = UIImage(named: "bg-world")
         }
 
