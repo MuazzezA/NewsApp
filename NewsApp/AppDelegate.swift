@@ -4,9 +4,10 @@
 //
 //  Created by Muazzez Aydın on 9.09.2023.
 //
-
+import FirebaseCore
 import UIKit
 import CoreData
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,42 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        let onboardingShown = UserDefaults.standard.bool(forKey: "onboardingShown")
-//        let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
-//           
-//        print("------------------")
-//        print("login : ", isLogin)
-//        print("onb : ", onboardingShown)
-//        print("------------------")
-//
-//           if isLogin {
-//               print("kullanıcı login var")
-//               // Kullanıcı giriş yapmış, "tabbarNC" adındaki UITabBarController'a yönlendir
-//
-//               let storyboard = UIStoryboard(name: "Home", bundle: nil)
-//               let homeViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
-//               window?.rootViewController = homeViewController
-//
-//
-//           } else {
-//               print("kullanıcı login yok")
-//                 // Kullanıcı giriş yapmamış, giriş veya kayıt ekranına yönlendir
-//
-//               if onboardingShown {
-//                   print("onboarding true")
-//                       // Onboarding gösterildi, kullanıcıyı "Main.storyboard" içindeki "authNC" Navigation Controller'a yönlendir
-//                       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                       let authNC = storyboard.instantiateViewController(withIdentifier: "authNC") as! UINavigationController
-//                       window?.rootViewController = authNC
-//               } else {
-//                   print("onboarding false")
-//
-//                   let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                   let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
-//                   window?.rootViewController = onboardingViewController
-//
-//               }
-//           }
+        FirebaseApp.configure()
+    
+        
         return true
     }
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyACKQWQPRmuJuo5NXM_VZYKFYEHShq7I5I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>203971417326</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>maazez.NewsApp</string>
+	<key>PROJECT_ID</key>
+	<string>iosnewsapp-e90cd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>iosnewsapp-e90cd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:203971417326:ios:ec411404dc2c5277f50fff</string>
+</dict>
+</plist>
