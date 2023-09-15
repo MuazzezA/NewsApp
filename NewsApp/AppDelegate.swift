@@ -14,19 +14,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let onboardingShown = UserDefaults.standard.bool(forKey: "onboardingShown")
-            
-            if !onboardingShown {
-                // Onboarding ekranlarını göster
-                // Örnek: Onboarding ekranlarını bir UINavigationController içinde gösterme
-                let onboardingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController") // Storyboard ve View Controller ismini uygulamanıza uygun şekilde ayarlayın.
-                window?.rootViewController = onboardingViewController
-                
-                // Onboarding ekranlarını gösterdikten sonra
-                UserDefaults.standard.set(true, forKey: "onboardingShown")
-            }
-            
-            return true
+        
+//        let onboardingShown = UserDefaults.standard.bool(forKey: "onboardingShown")
+//        let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
+//           
+//        print("------------------")
+//        print("login : ", isLogin)
+//        print("onb : ", onboardingShown)
+//        print("------------------")
+//
+//           if isLogin {
+//               print("kullanıcı login var")
+//               // Kullanıcı giriş yapmış, "tabbarNC" adındaki UITabBarController'a yönlendir
+//
+//               let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//               let homeViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+//               window?.rootViewController = homeViewController
+//
+//
+//           } else {
+//               print("kullanıcı login yok")
+//                 // Kullanıcı giriş yapmamış, giriş veya kayıt ekranına yönlendir
+//
+//               if onboardingShown {
+//                   print("onboarding true")
+//                       // Onboarding gösterildi, kullanıcıyı "Main.storyboard" içindeki "authNC" Navigation Controller'a yönlendir
+//                       let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                       let authNC = storyboard.instantiateViewController(withIdentifier: "authNC") as! UINavigationController
+//                       window?.rootViewController = authNC
+//               } else {
+//                   print("onboarding false")
+//
+//                   let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                   let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+//                   window?.rootViewController = onboardingViewController
+//
+//               }
+//           }
+        return true
     }
 
     // MARK: UISceneSession Lifecycle

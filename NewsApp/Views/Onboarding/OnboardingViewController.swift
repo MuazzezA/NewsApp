@@ -65,6 +65,7 @@ class OnboardingViewController: UIViewController {
             let controller = storyboard?.instantiateViewController(identifier: "authNC" ) as! UINavigationController
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .crossDissolve
+            UserDefaults.standard.set(true, forKey: "onboardingShown")
             present(controller, animated: true, completion: nil)
             
         } else {

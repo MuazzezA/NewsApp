@@ -12,13 +12,13 @@
         <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="OnboardingViewController" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UtR-Ky-8XJ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="637"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="8vT-fB-K4P">
                                     <size key="itemSize" width="392" height="567"/>
@@ -28,7 +28,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onboardingcell" id="1sf-A1-jId" customClass="OnboardingCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-6.666666666666667" width="392" height="567"/>
+                                        <rect key="frame" x="0.0" y="35" width="392" height="567"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="die-BC-sQV">
                                             <rect key="frame" x="0.0" y="0.0" width="392" height="567"/>
@@ -80,7 +80,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn0-gp-8q6" userLabel="Next">
-                                <rect key="frame" x="121.66666666666669" y="712" width="150" height="40"/>
+                                <rect key="frame" x="121.66666666666669" y="736" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.52941179279999995" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
@@ -104,7 +104,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Bgk-LG-8uK">
-                                <rect key="frame" x="121.66666666666669" y="668" width="150" height="26"/>
+                                <rect key="frame" x="121.66666666666669" y="692" width="150" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="5HJ-gH-D7o"/>
                                 </constraints>
@@ -126,6 +126,7 @@
                             <constraint firstItem="Bgk-LG-8uK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oPU-bc-zHG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wBa-3w-qds"/>
                     <connections>
                         <outlet property="button" destination="Wn0-gp-8q6" id="dm1-oP-9yX"/>
                         <outlet property="collectionView" destination="UtR-Ky-8XJ" id="yr4-jQ-wa2"/>
@@ -134,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43.511450381679388" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1885" y="525"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="VOW-pt-wPZ">
@@ -392,7 +393,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Sm9-pF-zlk">
             <objects>
-                <navigationController storyboardIdentifier="authNC" automaticallyAdjustsScrollViewInsets="NO" id="qXi-Np-jiY" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="authNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qXi-Np-jiY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tse-xZ-AJX">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -401,6 +402,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="xBF-dR-NYd" kind="relationship" relationship="rootViewController" id="Ztx-tr-G6l"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="onboarding" id="FEY-ZG-oyF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVA-fz-ADh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
