@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="421" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-KT-3or">
-                                <rect key="frame" x="0.0" y="143.66666666666669" width="393" height="625.33333333333326"/>
+                                <rect key="frame" x="0.0" y="198" width="393" height="571"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="421" id="r5x-5u-Rcz" customClass="NewsTableViewCell" customModule="NewsApp" customModuleProvider="target">
@@ -76,34 +76,43 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoşgeldin, Muazzez!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHr-v4-mgI">
-                                <rect key="frame" x="16" y="51" width="361" height="24.666666666666671"/>
+                                <rect key="frame" x="16" y="62.999999999999993" width="361" height="24.666666666666664"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Son Dakika" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akj-j8-JTl">
-                                <rect key="frame" x="16" y="75.666666666666671" width="361" height="60.000000000000014"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Oie-hN-fc6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
+                                <rect key="frame" x="16" y="155.66666666666666" width="361" height="40.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yPq-La-Ra2">
+                                <rect key="frame" x="0.0" y="91" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="UzK-mb-ZBU"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="akj-j8-JTl" firstAttribute="top" secondItem="SHr-v4-mgI" secondAttribute="bottom" id="6Wh-nB-zvf"/>
+                            <constraint firstItem="SHr-v4-mgI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="COn-LJ-7dj"/>
+                            <constraint firstItem="yPq-La-Ra2" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="CxO-gJ-TcF"/>
                             <constraint firstItem="akj-j8-JTl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="F3c-Ah-YZQ"/>
+                            <constraint firstItem="yPq-La-Ra2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HN5-hH-bH3"/>
                             <constraint firstItem="L1G-KT-3or" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="IER-zf-jBE"/>
-                            <constraint firstItem="L1G-KT-3or" firstAttribute="top" secondItem="akj-j8-JTl" secondAttribute="bottom" constant="8" id="Iz3-Of-32U"/>
-                            <constraint firstItem="SHr-v4-mgI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ngn-If-GIk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="akj-j8-JTl" secondAttribute="trailing" constant="16" id="Ntl-MP-bVe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SHr-v4-mgI" secondAttribute="trailing" constant="16" id="PA4-z2-Ii0"/>
                             <constraint firstItem="L1G-KT-3or" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Rzd-jV-76t"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="SHr-v4-mgI" secondAttribute="top" constant="8" id="ezm-Sz-xzI"/>
+                            <constraint firstItem="yPq-La-Ra2" firstAttribute="top" secondItem="SHr-v4-mgI" secondAttribute="bottom" constant="3" id="fWC-qQ-juz"/>
+                            <constraint firstItem="L1G-KT-3or" firstAttribute="top" secondItem="akj-j8-JTl" secondAttribute="bottom" constant="2" id="gUa-Uq-ru9"/>
                             <constraint firstItem="L1G-KT-3or" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="iuW-nd-xub"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SHr-v4-mgI" secondAttribute="trailing" constant="16" id="z0l-oQ-VPP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="akj-j8-JTl" secondAttribute="trailing" constant="16" id="mKi-3n-KPr"/>
+                            <constraint firstItem="SHr-v4-mgI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="4" id="qFz-gH-U0i"/>
+                            <constraint firstItem="akj-j8-JTl" firstAttribute="top" secondItem="yPq-La-Ra2" secondAttribute="bottom" constant="9" id="twA-AQ-P2i"/>
+                            <constraint firstItem="akj-j8-JTl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="zf1-fg-9Ef"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Anasayfa" id="yXZ-y6-Wxk">
