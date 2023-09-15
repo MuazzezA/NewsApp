@@ -11,11 +11,22 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        let onboardingShown = UserDefaults.standard.bool(forKey: "onboardingShown")
+            
+            if !onboardingShown {
+                // Onboarding ekranlarını göster
+                // Örnek: Onboarding ekranlarını bir UINavigationController içinde gösterme
+                let onboardingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController") // Storyboard ve View Controller ismini uygulamanıza uygun şekilde ayarlayın.
+                window?.rootViewController = onboardingViewController
+                
+                // Onboarding ekranlarını gösterdikten sonra
+                UserDefaults.standard.set(true, forKey: "onboardingShown")
+            }
+            
+            return true
     }
 
     // MARK: UISceneSession Lifecycle

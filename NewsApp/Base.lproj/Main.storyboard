@@ -12,7 +12,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,13 +42,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCm-xf-fvy">
-                                                    <rect key="frame" x="16" y="405" width="360" height="35.333333333333314"/>
+                                                    <rect key="frame" x="16" y="405" width="360" height="35.666666666666686"/>
                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-y1-Xjd">
-                                                    <rect key="frame" x="16" y="482.33333333333331" width="360" height="21"/>
+                                                    <rect key="frame" x="16" y="482.66666666666669" width="360" height="21"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                <buttonConfiguration key="configuration" style="plain" title="Devam Et">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -145,7 +145,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muf-gw-rbf">
-                                <rect key="frame" x="175" y="250" width="43" height="26"/>
+                                <rect key="frame" x="175" y="294" width="43" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -167,7 +167,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIe-rU-fsg">
-                                <rect key="frame" x="50" y="426" width="26.333333333333329" height="15"/>
+                                <rect key="frame" x="50" y="426" width="26.666666666666671" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -212,7 +212,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-world" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-Ia-Djk">
-                                <rect key="frame" x="0.0" y="59" width="393" height="173"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="173"/>
                                 <color key="tintColor" red="0.77263673509999997" green="0.77196289699999998" blue="0.77410827019999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="173" id="vR2-4o-uSm"/>
@@ -225,6 +225,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Kayıt Ol">
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="c04-VU-Pq6" kind="show" id="dLl-aJ-owz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qcD-SK-l3P"/>
@@ -238,6 +241,7 @@
                             <constraint firstItem="Kon-mi-a08" firstAttribute="centerX" secondItem="Vmr-am-oOT" secondAttribute="centerX" id="Kil-w2-8dc"/>
                             <constraint firstItem="BcC-Ia-Djk" firstAttribute="top" secondItem="qcD-SK-l3P" secondAttribute="top" id="LWI-if-28c"/>
                             <constraint firstItem="Muf-gw-rbf" firstAttribute="top" secondItem="qcD-SK-l3P" secondAttribute="top" constant="191" id="O7X-aT-3NZ"/>
+                            <constraint firstItem="BcC-Ia-Djk" firstAttribute="top" secondItem="qcD-SK-l3P" secondAttribute="top" id="UFU-0z-DWm"/>
                             <constraint firstItem="kkO-ve-z7k" firstAttribute="centerX" secondItem="Vmr-am-oOT" secondAttribute="centerX" id="Uaw-Fl-Ih2"/>
                             <constraint firstItem="lgd-G9-GbZ" firstAttribute="centerX" secondItem="Vmr-am-oOT" secondAttribute="centerX" id="Xw0-7n-kfP"/>
                             <constraint firstItem="LGM-3Y-xCC" firstAttribute="top" secondItem="kkO-ve-z7k" secondAttribute="bottom" constant="15" id="ZOI-Wg-FN0"/>
@@ -258,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMk-Kp-4H5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="-254"/>
+            <point key="canvasLocation" x="1953.4351145038167" y="-254.22535211267606"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="XqR-7o-yR6">
@@ -269,32 +273,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-world" translatesAutoresizingMaskIntoConstraints="NO" id="Ckk-dO-KD5">
-                                <rect key="frame" x="0.0" y="59" width="393" height="173"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="173"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="173" id="1n2-3f-R4y"/>
                                     <constraint firstAttribute="width" constant="393" id="nWi-oK-ByG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kayıt Ol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETI-3j-zxy">
-                                <rect key="frame" x="159" y="252" width="75.333333333333314" height="26"/>
+                                <rect key="frame" x="159.33333333333334" y="296" width="75" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjr-Ap-Tol">
-                                <rect key="frame" x="50" y="353" width="23.333333333333329" height="15"/>
+                                <rect key="frame" x="50" y="353" width="23.666666666666671" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3R-Sc-fVx">
-                                <rect key="frame" x="50" y="431" width="26.333333333333329" height="14.333333333333314"/>
+                                <rect key="frame" x="50" y="431" width="26.666666666666671" height="14.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-mr-RwZ" userLabel="Next">
-                                <rect key="frame" x="121.33333333333333" y="703" width="150.33333333333337" height="40"/>
+                                <rect key="frame" x="121.33333333333333" y="703" width="150.66666666666669" height="40"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.52941179279999995" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
@@ -318,7 +322,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW2-wd-TOk">
-                                <rect key="frame" x="213.33333333333334" y="758" width="82.666666666666657" height="33"/>
+                                <rect key="frame" x="213.66666666666666" y="758" width="82.666666666666657" height="33"/>
                                 <color key="tintColor" red="0.93725490570000003" green="0.52941179279999995" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Giriş Yap">
@@ -326,7 +330,7 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabın var mı?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX5-M7-EqN">
-                                <rect key="frame" x="102" y="765" width="102.33333333333331" height="19"/>
+                                <rect key="frame" x="102" y="765" width="102.66666666666669" height="19"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -341,7 +345,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tLJ-hf-KAm">
-                                <rect key="frame" x="50" y="449.33333333333331" width="300" height="34"/>
+                                <rect key="frame" x="50" y="449.66666666666669" width="300" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ORn-wy-dkL"/>
                                     <constraint firstAttribute="height" constant="34" id="vbf-F0-bPo"/>
@@ -383,7 +387,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dG1-cC-N6A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858.7786259541983" y="-254.22535211267606"/>
+            <point key="canvasLocation" x="2785.4961832061067" y="-254.22535211267606"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sm9-pF-zlk">
+            <objects>
+                <navigationController storyboardIdentifier="authNC" automaticallyAdjustsScrollViewInsets="NO" id="qXi-Np-jiY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tse-xZ-AJX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xBF-dR-NYd" kind="relationship" relationship="rootViewController" id="Ztx-tr-G6l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVA-fz-ADh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026.7175572519084" y="-254.22535211267606"/>
         </scene>
     </scenes>
     <resources>
