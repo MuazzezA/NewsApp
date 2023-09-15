@@ -44,8 +44,6 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("count : ", topHeadlinesData?.articles.count as Any)
-        
         return topHeadlinesData?.articles.count ?? 0
     }
     
@@ -58,21 +56,33 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.newsDescription.text = article?.description
         
         if let imageURLString = article?.urlToImage, let imageURL = URL(string: imageURLString) {
-            if let imageData = try? Data(contentsOf: imageURL) {
-                if let image = UIImage(data: imageData) {
-                    cell.newsImage.image = image
+            let session = URLSession.shared
+            let task = session.dataTask(with: imageURL) { (data, response, error) in
+                if let error = error {
+                    // Hata durumu
+                    print("Hata:", error)
+                    DispatchQueue.main.async {
+                        // Hata işleme veya varsayılan resim ayarlama
+                        cell.newsImage.image = UIImage(named: "bg-world")
+                    }
+                } else if let imageData = data, let image = UIImage(data: imageData) {
+                    // UIImage'i ana iş parçasında güncelleyin
+                    DispatchQueue.main.async {
+                        cell.newsImage.image = image
+                    }
                 } else {
-                    // UIImage oluşturulamadıysa, varsayılan bir resim veya hata işleme ekleyebilirsiniz
-                    cell.newsImage.image = UIImage(named: "bg-world")
+                    // Veriyi işleyemediyseniz veya UIImage oluşturamadıysanız
+                    DispatchQueue.main.async {
+                        cell.newsImage.image = UIImage(named: "bg-world")
+                    }
                 }
-            } else {
-                // Veri alınamadıysa, varsayılan bir resim veya hata işleme ekleyebilirsiniz
-                cell.newsImage.image = UIImage(named: "bg-world")
             }
+            task.resume()
         } else {
             // URL geçerli değilse, varsayılan bir resim veya hata işleme ekleyebilirsiniz
             cell.newsImage.image = UIImage(named: "bg-world")
         }
+
         
         return cell
     }
