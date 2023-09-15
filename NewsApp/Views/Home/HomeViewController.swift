@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         newsTableView.dataSource = self
         newsTableView.delegate = self
         
-        let urlString = "https://newsapi.org/v2/top-headlines?country=us&apiKey=ba2891a7f7bf4d06ad781699425b140d"
+        let urlString = "https://newsapi.org/v2/top-headlines?country=us&apiKey="+API_KEY
         
         WebService.shared.getNewsData(with: urlString) { result in
             switch result {
