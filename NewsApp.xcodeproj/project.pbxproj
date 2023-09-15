@@ -103,6 +103,21 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		F2B9130B2AB4969B006B9BCF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F26CFE912AB46B55003B7C1E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F2B9130C2AB496A7006B9BCF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		F2F515232AAE1F8600A3F06D /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,9 +144,10 @@
 		F2F515282AAE21AB00A3F06D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F2B9130C2AB496A7006B9BCF /* Profile */,
+				F2B9130B2AB4969B006B9BCF /* Home */,
 				F26962CA2AB3888C005EEA46 /* Auth */,
 				F2F5152C2AAE2C0700A3F06D /* Onboarding */,
-				F26CFE912AB46B55003B7C1E /* HomeViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
