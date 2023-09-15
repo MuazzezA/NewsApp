@@ -203,6 +203,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="loginButtonAct:" destination="xBF-dR-NYd" eventType="touchUpInside" id="fko-OJ-FNE"/>
                                     <action selector="nextButtonAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="irg-hT-3c8"/>
                                 </connections>
                             </button>
@@ -260,6 +261,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="z1k-dr-8hO"/>
+                    <connections>
+                        <outlet property="mailLoginTextField" destination="lgd-G9-GbZ" id="ZtZ-FP-068"/>
+                        <outlet property="pswLogintextField" destination="Kon-mi-a08" id="yR1-oH-VwE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMk-Kp-4H5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

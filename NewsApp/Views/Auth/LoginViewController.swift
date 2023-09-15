@@ -6,24 +6,41 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var pswLogintextField: UITextField!
+    @IBOutlet weak var mailLoginTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func loginButtonAct(_ sender: Any) {
+        guard let email = mailLoginTextField.text, let password = pswLogintextField.text else {
+                    // E-posta veya şifre eksikse hata işlemleri
+            return
+        }
+                
+                // Firebase Authentication ile giriş yap
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                print("Giriş başarısız: \(error.localizedDescription)")
+            } else {
+                print("Giriş başarılı!")
+                UserDefaults.standard.set(true, forKey: "isLogin")
+                let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
 
-    /*
-    // MARK: - Navigation
+                // "Home.storyboard" içindeki istediğiniz view controller'ı alın (örneğin, ana view controller)
+                let homeViewController = homeStoryboard.instantiateInitialViewController()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                // Kullanıcıyı "Home.storyboard" içindeki view controller'a yönlendirin
+                UIApplication.shared.windows.first?.rootViewController = homeViewController
+                UIApplication.shared.windows.first?.makeKeyAndVisible()
+            }
+        }
     }
-    */
-
 }
