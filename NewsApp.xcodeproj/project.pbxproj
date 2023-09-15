@@ -20,6 +20,10 @@
 		F26CFE942AB4808D003B7C1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26CFE932AB4808D003B7C1E /* GoogleService-Info.plist */; };
 		F2B9130E2AB4A49A006B9BCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9130D2AB4A49A006B9BCF /* ProfileViewController.swift */; };
 		F2B913102AB4A4AC006B9BCF /* SavedNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9130F2AB4A4AC006B9BCF /* SavedNewsViewController.swift */; };
+		F2B913132AB4C318006B9BCF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F2B913122AB4C318006B9BCF /* RxSwift */; };
+		F2B913152AB4C369006B9BCF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B913142AB4C369006B9BCF /* WebService.swift */; };
+		F2B913172AB4C3C2006B9BCF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B913162AB4C3C2006B9BCF /* News.swift */; };
+		F2B9131E2AB4FBDD006B9BCF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9131D2AB4FBDD006B9BCF /* NewsTableViewCell.swift */; };
 		F2F515252AAE1F9500A3F06D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F515242AAE1F9500A3F06D /* config.swift */; };
 		F2F5152B2AAE293D00A3F06D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2F5152A2AAE293D00A3F06D /* FirebaseAuth */; };
 		F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */; };
@@ -43,6 +47,9 @@
 		F26CFE932AB4808D003B7C1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2B9130D2AB4A49A006B9BCF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F2B9130F2AB4A4AC006B9BCF /* SavedNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNewsViewController.swift; sourceTree = "<group>"; };
+		F2B913142AB4C369006B9BCF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		F2B913162AB4C3C2006B9BCF /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		F2B9131D2AB4FBDD006B9BCF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		F2F515242AAE1F9500A3F06D /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F2F515302AAE562100A3F06D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B913132AB4C318006B9BCF /* RxSwift in Frameworks */,
 				F2F5152B2AAE293D00A3F06D /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				F2F515242AAE1F9500A3F06D /* config.swift */,
+				F2B913142AB4C369006B9BCF /* WebService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -129,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F2F515302AAE562100A3F06D /* OnboardingSlide.swift */,
+				F2B913162AB4C3C2006B9BCF /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +172,7 @@
 		F2F5152F2AAE53C700A3F06D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F2B9131D2AB4FBDD006B9BCF /* NewsTableViewCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 			name = NewsApp;
 			packageProductDependencies = (
 				F2F5152A2AAE293D00A3F06D /* FirebaseAuth */,
+				F2B913122AB4C318006B9BCF /* RxSwift */,
 			);
 			productName = NewsApp;
 			productReference = F21CEAAC2AAC7BF000BF3D98 /* NewsApp.app */;
@@ -215,6 +227,7 @@
 			mainGroup = F21CEAA32AAC7BF000BF3D98;
 			packageReferences = (
 				F2F515292AAE293D00A3F06D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F2B913112AB4C318006B9BCF /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = F21CEAAD2AAC7BF000BF3D98 /* Products */;
 			projectDirPath = "";
@@ -245,9 +258,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B913152AB4C369006B9BCF /* WebService.swift in Sources */,
 				F26962CE2AB390CE005EEA46 /* RegisterViewController.swift in Sources */,
 				F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */,
 				F21CEAB02AAC7BF000BF3D98 /* AppDelegate.swift in Sources */,
+				F2B913172AB4C3C2006B9BCF /* News.swift in Sources */,
 				F21CEABA2AAC7BF000BF3D98 /* NewsApp.xcdatamodeld in Sources */,
 				F2F515252AAE1F9500A3F06D /* config.swift in Sources */,
 				F26CFE922AB46B55003B7C1E /* HomeViewController.swift in Sources */,
@@ -255,6 +270,7 @@
 				F26962CC2AB388A2005EEA46 /* LoginViewController.swift in Sources */,
 				F2F515312AAE562100A3F06D /* OnboardingSlide.swift in Sources */,
 				F2F515332AAE57D900A3F06D /* OnboardingCollectionViewCell.swift in Sources */,
+				F2B9131E2AB4FBDD006B9BCF /* NewsTableViewCell.swift in Sources */,
 				F21CEAB22AAC7BF000BF3D98 /* SceneDelegate.swift in Sources */,
 				F2B913102AB4A4AC006B9BCF /* SavedNewsViewController.swift in Sources */,
 			);
@@ -476,6 +492,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F2B913112AB4C318006B9BCF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		F2F515292AAE293D00A3F06D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -487,6 +511,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F2B913122AB4C318006B9BCF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2B913112AB4C318006B9BCF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		F2F5152A2AAE293D00A3F06D /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F2F515292AAE293D00A3F06D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
