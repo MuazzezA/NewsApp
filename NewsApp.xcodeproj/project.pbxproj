@@ -15,6 +15,8 @@
 		F21CEABF2AAC7BF100BF3D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21CEABD2AAC7BF100BF3D98 /* LaunchScreen.storyboard */; };
 		F26962CC2AB388A2005EEA46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26962CB2AB388A2005EEA46 /* LoginViewController.swift */; };
 		F26962CE2AB390CE005EEA46 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26962CD2AB390CE005EEA46 /* RegisterViewController.swift */; };
+		F26CFE902AB467DA003B7C1E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26CFE8F2AB467DA003B7C1E /* Home.storyboard */; };
+		F26CFE922AB46B55003B7C1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26CFE912AB46B55003B7C1E /* HomeViewController.swift */; };
 		F2F515252AAE1F9500A3F06D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F515242AAE1F9500A3F06D /* config.swift */; };
 		F2F5152B2AAE293D00A3F06D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2F5152A2AAE293D00A3F06D /* FirebaseAuth */; };
 		F2F5152E2AAE2C3F00A3F06D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */; };
@@ -33,6 +35,8 @@
 		F21CEAC02AAC7BF100BF3D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26962CB2AB388A2005EEA46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F26962CD2AB390CE005EEA46 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F26CFE8F2AB467DA003B7C1E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F26CFE912AB46B55003B7C1E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F2F515242AAE1F9500A3F06D /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		F2F5152D2AAE2C3F00A3F06D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F2F515302AAE562100A3F06D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				F21CEAAF2AAC7BF000BF3D98 /* AppDelegate.swift */,
 				F21CEAB12AAC7BF000BF3D98 /* SceneDelegate.swift */,
 				F21CEAB52AAC7BF000BF3D98 /* Main.storyboard */,
+				F26CFE8F2AB467DA003B7C1E /* Home.storyboard */,
 				F21CEABB2AAC7BF100BF3D98 /* Assets.xcassets */,
 				F21CEABD2AAC7BF100BF3D98 /* LaunchScreen.storyboard */,
 				F21CEAC02AAC7BF100BF3D98 /* Info.plist */,
@@ -123,6 +128,7 @@
 			children = (
 				F26962CA2AB3888C005EEA46 /* Auth */,
 				F2F5152C2AAE2C0700A3F06D /* Onboarding */,
+				F26CFE912AB46B55003B7C1E /* HomeViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +216,7 @@
 				F21CEABF2AAC7BF100BF3D98 /* LaunchScreen.storyboard in Resources */,
 				F21CEABC2AAC7BF100BF3D98 /* Assets.xcassets in Resources */,
 				F21CEAB72AAC7BF000BF3D98 /* Main.storyboard in Resources */,
+				F26CFE902AB467DA003B7C1E /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +232,7 @@
 				F21CEAB02AAC7BF000BF3D98 /* AppDelegate.swift in Sources */,
 				F21CEABA2AAC7BF000BF3D98 /* NewsApp.xcdatamodeld in Sources */,
 				F2F515252AAE1F9500A3F06D /* config.swift in Sources */,
+				F26CFE922AB46B55003B7C1E /* HomeViewController.swift in Sources */,
 				F26962CC2AB388A2005EEA46 /* LoginViewController.swift in Sources */,
 				F2F515312AAE562100A3F06D /* OnboardingSlide.swift in Sources */,
 				F2F515332AAE57D900A3F06D /* OnboardingCollectionViewCell.swift in Sources */,
