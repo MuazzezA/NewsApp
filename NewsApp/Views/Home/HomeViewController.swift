@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var newsTableView: UITableView!
     var topHeadlinesData: News?
-    
+    var mainNewsData: News? // burası güncellenebilir data olacak - kategori ve search işlemlerinde yeni datayla güncellenmeli /default topHeadlinesData
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,10 @@ class HomeViewController: UIViewController {
         WebService.shared.getNewsData(with: urlString) { result in
             switch result {
             case .success(let newsData):
-                
                 DispatchQueue.main.async {
                     self.topHeadlinesData = newsData
+                    self.mainNewsData = newsData
                     self.newsTableView.reloadData()
-                   
                 }
             case .failure(let error):
                 print("Hata:", error)
@@ -39,46 +38,3 @@ class HomeViewController: UIViewController {
 }
 
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topHeadlinesData?.articles.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
-                    
-        let article = topHeadlinesData?.articles[indexPath.row]
-       
-        cell.newsTitle.text = article?.title
-        cell.newsDescription.text = article?.description
-        
-        if let imageURLString = article?.urlToImage, let imageURL = URL(string: imageURLString) {
-            let session = URLSession.shared
-            let task = session.dataTask(with: imageURL) { (data, response, error) in
-                if let error = error {
-                    print("Hata:", error)
-                    DispatchQueue.main.async {
-                        cell.newsImage.image = UIImage(named: "bg-world")
-                    }
-                } else if let imageData = data, let image = UIImage(data: imageData) {
-                    DispatchQueue.main.async {
-                        cell.newsImage.image = image
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        cell.newsImage.image = UIImage(named: "bg-world")
-                    }
-                }
-            }
-            task.resume()
-        } else {
-            cell.newsImage.image = UIImage(named: "bg-world")
-        }
-
-        
-        return cell
-    }
-    
-    
-    
-}
