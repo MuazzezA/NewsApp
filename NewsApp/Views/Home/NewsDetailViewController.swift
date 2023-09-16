@@ -18,16 +18,19 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var starButton: UIButton!
     
+    let context = appDelegate.persistentContainer.viewContext
+    var savedNewsData =  [SavedNews]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        readNewsDatabase()
+        checkIsFavorite()
+        
         if let selectedArticle = newsArticleDetail {
             titleLabel.text = selectedArticle.title
             descLabel.text = selectedArticle.description ?? "Açıklama Yok"
             authorLabel.text = selectedArticle.author ?? "Yazar Bilgisi Yok"
 
-            // Eğer imageURLString ve imageURL oluşturulabilirse, resmi yükle
             if let imageURLString = selectedArticle.urlToImage, let imageURL = URL(string: imageURLString) {
                 activityIndicator.startAnimating()
                 let session = URLSession.shared
@@ -35,43 +38,85 @@ class NewsDetailViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.activityIndicator.stopAnimating()
                     }
-                    if let error = error {
-                        print("Hata:", error)
-                        DispatchQueue.main.async {
-                            self.newsImage.image = UIImage(named: "bg-world")
-                        }
-                    } else if let imageData = data, let image = UIImage(data: imageData) {
+                    if let imageData = data, let image = UIImage(data: imageData) {
                         DispatchQueue.main.async {
                             self.newsImage.image = image
                         }
                     } else {
                         DispatchQueue.main.async {
-                            self.newsImage.image = UIImage(named: "bg-world")
+                            self.newsImage.image = UIImage(named: "no-image")
                         }
                     }
                 }
                 task.resume()
-            } else {
-                newsImage.image = UIImage(named: "bg-world")
             }
         } else {
             titleLabel.text = "Veri Bekleniyor"
             descLabel.text = ""
             authorLabel.text = ""
-            newsImage.image = UIImage(named: "bg-world")
+            newsImage.image = UIImage(named: "no-image")
             activityIndicator.startAnimating()
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        readNewsDatabase()
+    }
+    
     @IBAction func starButtonAct(_ sender: Any) {
-        if let button = sender as? UIButton {
-            if button.currentImage == UIImage(systemName: "star") {
-                button.setImage(UIImage(systemName: "star.fill"), for: .normal)
-            } else {
-                button.setImage(UIImage(systemName: "star"), for: .normal)
-            }
+        if starButton.currentImage == UIImage(systemName: "star") {
+            starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            saveToDatabase()
+        } else if starButton.currentImage == UIImage(systemName: "star.fill"){
+            starButton.setImage(UIImage(systemName: "star"), for: .normal)
+            deleteFromDatabase()
         }
     }
     
+    func saveToDatabase (){
+              
+        let data = SavedNews(context: context)
+        data.author = newsArticleDetail?.author
+        data.descriiption = newsArticleDetail?.description
+        data.title = newsArticleDetail?.title
+        data.url = newsArticleDetail?.url
+        data.urlToImage = newsArticleDetail?.urlToImage
+ 
+        appDelegate.saveContext()
+        print("kayıt oldu")
+        
+    }
+    
+    func deleteFromDatabase(){
+        if let index = savedNewsData.firstIndex(where: { $0.title == newsArticleDetail?.title }) {
+            let data = savedNewsData[index]
+            context.delete(data)
+            appDelegate.saveContext()
+            print("silindi")
+        } else {
+            print("hata- bulunamadı")
+        }
+    
+    }
 
+    
+    func readNewsDatabase(){
+        do{
+            savedNewsData = try context.fetch(SavedNews.fetchRequest())
+        }catch{
+            print("hata-okurken detayda---- ")
+        }
+    }
+    
+    func checkIsFavorite (){
+        if let index = savedNewsData.firstIndex(where: { $0.title == newsArticleDetail?.title }) {
+            starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            print("favorilerde")
+        } else {
+            print("hata- bulunamadı")
+            starButton.setImage(UIImage(systemName: "star"), for: .normal)
+        }
+
+    }
 }
