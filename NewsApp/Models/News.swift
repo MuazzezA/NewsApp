@@ -20,7 +20,7 @@ class News: Codable {
 
 // MARK: - Article
 class Article: Codable {
-    let source: Source
+    let source: Source?
     let author: String?
     let title: String
     let description: String?
@@ -29,7 +29,7 @@ class Article: Codable {
     let publishedAt: String?
     let content: String?
 
-    init(source: Source, author: String?, title: String, description: String?, url: String, urlToImage: String?, publishedAt: String?, content: String?) {
+    init(source: Source?, author: String?, title: String, description: String?, url: String, urlToImage: String?, publishedAt: String?, content: String?) {
         self.source = source
         self.author = author
         self.title = title
