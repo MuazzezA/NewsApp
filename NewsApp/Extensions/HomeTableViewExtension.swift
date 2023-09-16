@@ -25,7 +25,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 if let error = error {
                     print("Hata:", error)
                     DispatchQueue.main.async {
-                        cell.newsImage.image = UIImage(named: "bg-world")
+                        cell.newsImage.image = UIImage(named: "no-image")
                     }
                 } else if let imageData = data, let image = UIImage(data: imageData) {
                     DispatchQueue.main.async {
@@ -33,13 +33,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                     }
                 } else {
                     DispatchQueue.main.async {
-                        cell.newsImage.image = UIImage(named: "bg-world")
+                        cell.newsImage.image = UIImage(named: "no-image")
                     }
                 }
             }
             task.resume()
         } else {
-            cell.newsImage.image = UIImage(named: "bg-world")
+            cell.newsImage.image = UIImage(named: "no-image")
         }
         return cell
     }

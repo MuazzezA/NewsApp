@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="421"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-world" translatesAutoresizingMaskIntoConstraints="NO" id="On5-h1-N3E">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="On5-h1-N3E">
                                                     <rect key="frame" x="20" y="11" width="353" height="285"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="285" id="hZf-0P-MTG"/>
@@ -289,8 +289,22 @@
                     <view key="view" contentMode="scaleToFill" id="JS4-56-wvY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="moE-ci-tCF" userLabel="avatar">
+                                <rect key="frame" x="121.66666666666669" y="99.999999999999986" width="150" height="148.66666666666669"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="WHj-QN-wdq"/>
+                                    <constraint firstAttribute="height" constant="150" id="mMq-Zm-R9i"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aFr-fo-zBF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="moE-ci-tCF" firstAttribute="top" secondItem="aFr-fo-zBF" secondAttribute="top" constant="40" id="QO0-2b-sDY"/>
+                            <constraint firstItem="moE-ci-tCF" firstAttribute="centerX" secondItem="JS4-56-wvY" secondAttribute="centerX" id="VGf-Zq-JRW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profil" id="IIT-Qa-IMb">
                         <imageReference key="image" image="person" catalog="system" symbolScale="medium" renderingMode="hierarchical-single">
@@ -306,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdT-Mz-Dnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2279" y="701"/>
+            <point key="canvasLocation" x="2278.6259541984732" y="700.70422535211276"/>
         </scene>
         <!--Kayıtlar-->
         <scene sceneID="z1N-2F-bV7">
@@ -334,9 +348,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg-world" width="6001" height="4001"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="no-image" width="2000" height="2000"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
