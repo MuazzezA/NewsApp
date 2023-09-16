@@ -13,9 +13,12 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 class HomeViewController: UIViewController {
 
     
+    @IBOutlet weak var leadingConst: NSLayoutConstraint!
     @IBOutlet weak var newsTableView: UITableView!
     var topHeadlinesData: News?
     var mainNewsData: News? // burası güncellenebilir data olacak - kategori ve search işlemlerinde yeni datayla güncellenmeli /default topHeadlinesData
+    
+    var sideMenu = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,21 @@ class HomeViewController: UIViewController {
                 print("Hata:", error)
             }
         }
+    }
+    
+    @IBAction func menuButtonAct(_ sender: Any) {
+        if(sideMenu){
+            leadingConst.constant = -250
+            UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }else{
+            leadingConst.constant = 0
+            UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        sideMenu = !sideMenu
     }
 }
 
