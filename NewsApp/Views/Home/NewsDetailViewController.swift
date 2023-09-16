@@ -65,11 +65,11 @@ class NewsDetailViewController: UIViewController {
     }
     
     @IBAction func starButtonAct(_ sender: Any) {
-        if starButton.currentImage == UIImage(systemName: "star") {
-            starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        if starButton.currentImage == UIImage(systemName: "bookmark") {
+            starButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             saveToDatabase()
-        } else if starButton.currentImage == UIImage(systemName: "star.fill"){
-            starButton.setImage(UIImage(systemName: "star"), for: .normal)
+        } else if starButton.currentImage == UIImage(systemName: "bookmark.fill"){
+            starButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
             deleteFromDatabase()
         }
     }
@@ -111,11 +111,11 @@ class NewsDetailViewController: UIViewController {
     
     func checkIsFavorite (){
         if let index = savedNewsData.firstIndex(where: { $0.title == newsArticleDetail?.title }) {
-            starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            starButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
             print("favorilerde")
         } else {
             print("hata- bulunamadı")
-            starButton.setImage(UIImage(systemName: "star"), for: .normal)
+            starButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
         }
 
     }
