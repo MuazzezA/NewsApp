@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
     @IBOutlet weak var newsTableView: UITableView!
+    @IBOutlet weak var homeTitleLabel: UILabel!
+    
     var topHeadlinesData: News?
     var mainNewsData: News? // burası güncellenebilir data olacak - kategori ve search işlemlerinde yeni datayla güncellenmeli /default topHeadlinesData
     
@@ -42,19 +44,62 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @IBAction func menuButtonAct(_ sender: Any) {
-        if(sideMenu){
-            leadingConst.constant = -250
-            UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
-                self.view.layoutIfNeeded()
-            })
-        }else{
-            leadingConst.constant = 0
-            UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
-                self.view.layoutIfNeeded()
-            })
+    @IBAction func buttonTapped(_ sender: UIButton) {
+       
+        if let title = sender.titleLabel?.text {
+            let trimmedLowercasedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+            print("button title : \(trimmedLowercasedTitle)")
+            fetchNewsForCategories(category: trimmedLowercasedTitle)
+            homeTitleLabel.text = title
         }
+        
+    }
+    
+    @IBAction func menuButtonAct(_ sender: Any) {
+        sideMenu ? closeSideMenu() : openSideMenu()
+    }
+    func openSideMenu(){
+        leadingConst.constant = 0
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
+            self.view.layoutIfNeeded()
+        })
         sideMenu = !sideMenu
+    }
+    
+    func closeSideMenu(){
+        leadingConst.constant = -250
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
+            self.view.layoutIfNeeded()
+        })
+        sideMenu = !sideMenu
+    }
+    
+    func fetchNewsForCategories(category: String){
+        print("selected category: ",category)
+  
+        if(category == "all"){
+            print("tüm data")
+            self.mainNewsData = self.topHeadlinesData
+            self.newsTableView.reloadData()
+        }
+        else{
+            print("kategorili data")
+            let urlString = "top-headlines?country=us&category=\(category)"
+            WebService.shared.getNewsData(with: urlString) { result in
+                switch result {
+                case .success(let newsData):
+                    DispatchQueue.main.async {
+                        self.mainNewsData = newsData
+                        self.newsTableView.reloadData()
+                    }
+                case .failure(let error):
+                    print("Hata:", error)
+                }
+            }
+            
+        }
+        
+        closeSideMenu()
     }
 }
 
