@@ -49,7 +49,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let newsDetailVC = storyboard.instantiateViewController(withIdentifier: "NewsDetailViewController") as! NewsDetailViewController
         newsDetailVC.newsArticleDetail = selectedArticle
-        present(newsDetailVC, animated: true, completion: nil)
+        navigationController?.pushViewController(newsDetailVC, animated: true)
     }
    
 }

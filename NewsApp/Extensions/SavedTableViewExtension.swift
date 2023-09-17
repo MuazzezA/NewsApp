@@ -48,8 +48,6 @@ extension SavedNewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedFavoriteNews = savedNewsData[indexPath.row]
-//        var data = Article(source: Source(), author: selectedArticle.author, title: selectedArticle.title ?? "", description: selectedArticle.descriiption, url: selectedArticle.url ?? "", urlToImage: selectedArticle.urlToImage, publishedAt: nil, content: nil)
-        
         let data = Article(
             source: nil,
             author: selectedFavoriteNews.author,
@@ -64,7 +62,7 @@ extension SavedNewsViewController: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let newsDetailVC = storyboard.instantiateViewController(withIdentifier: "NewsDetailViewController") as! NewsDetailViewController
         newsDetailVC.newsArticleDetail = data
-        present(newsDetailVC, animated: true, completion: nil)
+        navigationController?.pushViewController(newsDetailVC, animated: true)
     }
     
 }
