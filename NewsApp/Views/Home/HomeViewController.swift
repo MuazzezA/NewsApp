@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
     @IBOutlet weak var newsTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var homeTitleLabel: UILabel!
     
     var topHeadlinesData: News?
@@ -27,6 +28,7 @@ class HomeViewController: UIViewController {
         
         newsTableView.dataSource = self
         newsTableView.delegate = self
+        searchBar.delegate = self
         
         let urlString = "top-headlines?country=us"
         
@@ -104,3 +106,28 @@ class HomeViewController: UIViewController {
 }
 
 
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            if let searchText = searchBar.text {
+                if(searchText == ""){
+                    self.mainNewsData = self.topHeadlinesData
+                    self.newsTableView.reloadData()
+                }else{
+                    let urlString = "everything?q=\(searchText)"
+                    
+                    WebService.shared.getNewsData(with: urlString) { result in
+                        switch result {
+                        case .success(let newsData):
+                            DispatchQueue.main.async {
+                                self.mainNewsData = newsData
+                                self.newsTableView.reloadData()
+                            }
+                        case .failure(let error):
+                            print("Hata:", error)
+                        }
+                    }
+                }
+            }
+        }
+}

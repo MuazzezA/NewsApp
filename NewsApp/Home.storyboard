@@ -265,6 +265,7 @@
                         <outlet property="homeTitleLabel" destination="akj-j8-JTl" id="bQI-27-Bve"/>
                         <outlet property="leadingConst" destination="U65-Q8-RJy" id="vcu-87-YF4"/>
                         <outlet property="newsTableView" destination="L1G-KT-3or" id="rJF-DN-PLp"/>
+                        <outlet property="searchBar" destination="yPq-La-Ra2" id="pTy-Kl-sGM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
