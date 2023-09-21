@@ -100,7 +100,6 @@
 			children = (
 				F2F5152F2AAE53C700A3F06D /* Extensions */,
 				F2F515282AAE21AB00A3F06D /* Views */,
-				F2F515272AAE219800A3F06D /* ViewModels */,
 				F2F515262AAE219100A3F06D /* Models */,
 				F2F515232AAE1F8600A3F06D /* Services */,
 				F21CEAAF2AAC7BF000BF3D98 /* AppDelegate.swift */,
@@ -166,13 +165,6 @@
 				F2B913162AB4C3C2006B9BCF /* News.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		F2F515272AAE219800A3F06D /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		F2F515282AAE21AB00A3F06D /* Views */ = {

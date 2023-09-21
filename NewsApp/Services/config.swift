@@ -7,4 +7,4 @@
 
 // your api key
 
-let API_KEY = "your news api key"
+let API_KEY = "ba2891a7f7bf4d06ad781699425b140d"
